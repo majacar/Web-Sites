@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+
+<script>
+function myFunction(form) {
+a = parseFloat(form.a.value);
+b = parseFloat(form.b.value);
+form.c.value = Math.sqrt(a*a + b*b);
+}
+</script>
+
+</head>
+
+<body>
+
+<form>
+
+<input type=text name=a size=3><sup>2</sup> +
+<input type=text name=b size=3><sup>2</sup> =
+<input type=text name=c size=8>
+
+<button type=button onClick="myFunction(form)"> SOLVE </button>
+</form>
+
+
+</body>
+</html>
+
