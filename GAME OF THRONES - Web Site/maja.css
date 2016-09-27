@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+.tekstovi::after {
+    content: "";
+    clear: both;
+    display: inline-block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+body {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: black;
+    background-color: gray;
+    margin: 0;
+}
+
+#menu {
+    margin-top: 0;   
+    width: 100%;
+    background-color: black;
+    overflow: auto;     
+}
+
+ul {
+    list-style-type: none;
+    padding: 25px 0;    
+    margin-top: 0;
+}
+
+li {
+display: inline;
+}
+
+
+li a { 
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: gray;
+}
+
+#logo {
+    float: left;
+    width: 270px; 
+}
+
+
+#fb, #twit {
+    margin-right: 0;
+    width: 30px;
+}
+
+#demo {
+    margin-right: 0;
+    color: #D3D3D3;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+#GOT, #cool {    
+     margin-top: -15px;
+     width: 100%;
+}
+
+#trailer {
+     position: relative;
+     margin-top: 5px;
+     width: 100%;
+}
+
+#reklama {
+       font-size: 1.5em;
+       text-align: center;
+       font-style: italic;
+       padding: 0;
+       color: white;
+}
+
+#jedan, #dva {  
+    background: lightgray;
+    border-radius: 10px;    
+    padding: 10px;
+    
+}
+
+#one, #two, #three, #four {
+     background: lightgray;
+     padding: 10px;
+     min-height: 250px;
+     box-shadow: 10px 10px #696969;   
+}
+
+.isto {
+    width: 100%;
+}
+
+#eins, #zwei {  
+    background: lightgray;
+    border-radius: 10px;    
+    padding: 10px;
+    margin-top: 0;   
+}
+
+#drei {  
+    background: lightgray;
+    border-radius: 10px;    
+    padding: 10px;
+}
+
+#footer {
+    color: #D3D3D3;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+}
+
+a.back:visited, a.back:hover {
+    color: #800000;
+
+}
+
+#potpis {
+    color: white;
+    float: right;
+    margin-right: 20px;
+}
+
+#john, #arya, #deneris, #red, #tirion, #throne, #sansa, #bran {
+    color: black;
+    width: 100%;
+    margin-top: 5px;
+    background: lightgray;
+    padding: 20px;
+    min-height: 200px;
+    box-shadow: 10px 10px #696969; 
+    border-radius: 10px;
+}
