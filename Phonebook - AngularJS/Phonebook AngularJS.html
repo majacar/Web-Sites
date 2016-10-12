@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>APLIKACIJA</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="phonebook.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="Ctrl">
+ <div class="container">
+    <h3>My Phonebook</h3>
+	<button class="btn btn-primary btn-lg" ng-click="showForm()">Add</button>
+	<button class="btn btn-primary btn-lg" ng-click="hideForm()">Hide</button>
+	
+	<form name="forma "ng-show="addForm">
+	   <h3> Add contact </h3>
+	  <div class="row">
+	     <div class="col-md-3">
+		  Name: <input type="text" ng-model="newcontact.name" required>
+		 </div>
+		 
+		 <div class="col-md-3">
+		  Email: <input type="text" ng-model="newcontact.email">
+		 </div>
+		 
+		 <div class="col-md-3">
+		  Phone: <input type="text" ng-model="newcontact.phone">
+		 </div>
+		 
+		 <div class="col-md-3">
+		 <button class="btn btn-primary btn-lg" ng-disabled="forma.$invalid" ng-click="saveForm()">Save</button>
+		 </div>
+		 
+	  </div> 
+	</form>
+	
+	<h3>Your contacts({{contacts.length}})</h3>
+	
+    <table class="table table-hover">
+	  <thead>
+	    <tr>
+		  <th width="200px">Name</th>
+		  <th width="200px">Email</th>
+		  <th width="200px">Phone</th>
+		  <th width="200px">Actions</th>
+		</tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="contact in contacts">
+		  <td><a href=#>{{contact.name}}</a></td>
+		  <td>{{contact.email}}</td>
+		  <td>{{contact.phone}}</td>
+		   <input type="hidden" ng-model="newcontact.id" />
+		   <td><button class="btn btn-primary" ng-click="edit(contact.id)">EDIT</button>
+		      <button class="btn btn-danger" ng-click="delete(contact.id)">DELETE</button></td>
+		</tr>
+	  </tbody>
+	  
+	</table>
+ </div>
+
+</body>
+</html>
